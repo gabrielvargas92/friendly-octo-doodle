@@ -1,20 +1,19 @@
-rotate([1,2,3,4,5,6,7],3);
+rotate([1, 2, 3, 4, 5, 6, 7], 3);
 
 function rotate(nums, k) {
-    var result = [];
-    for (let i = 0; i < nums.length; i++) {
-        var finalIndex = 0;
-        if ((i + k) >= nums.length)
-            finalIndex = (i + k) % nums.length;
-        else
-            finalIndex = i + k;
-
-        result[finalIndex] = nums[i];
-    }
-
-    console.log(result);
+    k = k % nums.length;
+    reverse(nums, 0, nums.length-1)
+    reverse(nums, 0, k -1)
+    reverse(nums, k, nums.length-1)
+    console.log(nums);
 }
 
-function reverse(nums, start, end){
-    
+function reverse(nums, start, end) {
+    while(start < end){
+        var temp = nums[start]
+        nums[start] = nums[end]
+        nums[end] = temp;
+        start++;
+        end--;
+    }
 }
