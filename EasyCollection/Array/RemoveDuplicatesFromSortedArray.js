@@ -17,9 +17,4 @@ function RemoveDuplicatesFromSortedArray(nums) {
 }
 
 
-// 1 - [1, 1 ,3 ,4 ,4 ,4] ######### slow = 0  ########## fast = 1
-// 2 - [1, 3, 3 , 4, 4 ,4]
-// 3 - [1, 3, 4 , 4, 4 ,4]
-
-
 
